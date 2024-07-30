@@ -1,16 +1,14 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
   return (
-    <>
-      <div className="grid grid-rows-1 grid-cols-2 py-6 px-4">
-        <div>
-          <Link to="/">
-            <h1 className="ml-5 mr-10 hover:font-bold text-[#ffc107]">Abdullah.</h1>
-          </Link>
-        </div>
-        <div className=" grid grid-cols-5">
+    <nav className="bg-[#311e25] py-4 px-4">
+      <div className="flex justify-between items-center">
+        <Link to="/">
+          <h1 className="text-[#ffc107] font-bold">Abdullah.</h1>
+        </Link>
+        <div className="hidden md:flex gap-4">
           <Link to="/">
             <h1 className="text-[#ffc107] hover:font-bold">Home</h1>
           </Link>
@@ -28,6 +26,6 @@ export default function Nav() {
           </Link>
         </div>
       </div>
-    </>
+    </nav>
   );
 }
